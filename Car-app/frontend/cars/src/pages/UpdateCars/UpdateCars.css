@@ -1,0 +1,82 @@
+/* UpdateCars.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Add this CSS to your component or a separate CSS file */
+
+/* Style for the form container */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for labels */
+label {
+  margin-top: 4px;
+  display: block;
+}
+
+/* Style for input fields */
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  background-color: #444;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Style for the submit button */
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Add more styles as needed */

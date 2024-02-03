@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style for table headers */
+th {
+  background-color: #3498db;
+  color: #fff;
+  border: 1px solid #2980b9;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Style for table cells */
+td {
+  border: 1px solid #ecf0f1;
+  padding: 10px;
+}
+
+/* Style for links inside table cells */
+td a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #3498db;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 3px;
+}
+
+/* Hover effect for links */
+td a:hover {
+  background-color: #2980b9;
+}
+
+a {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Hover effect for the submit button */
+a:hover {
+  background-color: #2980b9;
+}
