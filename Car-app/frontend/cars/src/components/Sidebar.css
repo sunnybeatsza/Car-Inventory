@@ -1,0 +1,56 @@
+/* Sidebar.css */
+
+.sidebar {
+  background-color: black; /* Sidebar background color */
+  padding: 0.5rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #fff; /* Button text color */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar-active {
+  width: 250px; /* Width of the sidebar when active */
+  transition: width 0.3s ease;
+}
+
+.sidebar-disabled {
+  width: 0; /* Width of the sidebar when disabled (hidden) */
+  overflow: hidden; /* Hide content that overflows the sidebar */
+  transition: width 0.3s ease;
+}
+
+.sidebar-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-items li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar-items li:hover {
+  background-color: #555; /* Background color on hover */
+}
+
+/* Styles for the icons */
+.sidebar-items li span {
+  margin-right: 20px; /* Spacing between icon and text */
+}
+
+/* Button styles for closing the sidebar */
+.navbar-toggle button {
+  background-color: black;
+  border: none;
+  color: #fff; /* Button text color */
+  font-size: 18px;
+  cursor: pointer;
+}

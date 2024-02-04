@@ -7,6 +7,7 @@ import { CreateCar } from "./pages/CreateCar/CreateCar"; // Import the CreateCar
 import { DeleteCar } from "./pages/DeleteCar"; // Import the DeleteCar component
 import { EditCar } from "./pages/EditCar"; // Import the EditCar component
 import { UpdateCars } from "./pages/UpdateCars/UpdateCars";
+import Sidebar from "./components/Sidebar";
 
 // Define the main App component
 function App() {
@@ -15,6 +16,8 @@ function App() {
     // Use a div with the className "App" for styling
     <div className="App">
       {/* Set up routes using the Routes component */}
+      <Sidebar />
+
       <Routes>
         {/* Define a route for the Home component, accessible at the root path */}
         <Route path="/" element={<Home />} />
