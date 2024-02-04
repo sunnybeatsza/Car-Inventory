@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
 }
 /* Style for the table */
 table {

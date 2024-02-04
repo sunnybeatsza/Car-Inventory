@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 // Define the Home component
 export const Home = () => {
@@ -65,82 +66,86 @@ export const Home = () => {
 
   // Render the Home component
   return (
-    <div>
-      {/* Header section */}
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-
+    <div className="home-container">
       <div>
-        <h1>Cars Inventory</h1>
+        {/* Header section */}
+        <button>
+          <Link to="/">Home</Link>
+        </button>
 
-        <div className="header">
-          {/* Link to the CreateCar page */}
-          <Link to="/cars/create">Create car</Link>
-          <Link to={`/cars/update/cars/${selectedCars.join(",")}`}>
-            Edit Cars
-          </Link>
-          <button onClick={() => filterCarsOlderThan5Years()}>5 years+</button>
+        <div>
+          <h1>Cars Inventory</h1>
+
+          <div className="header">
+            {/* Link to the CreateCar page */}
+            <Link to="/cars/create">Create car</Link>
+            <Link to={`/cars/update/cars/${selectedCars.join(",")}`}>
+              Edit Cars
+            </Link>
+            <button onClick={() => filterCarsOlderThan5Years()}>
+              5 years+
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Search input */}
-      <input
-        className="my-3"
-        placeholder="Search..."
-        onChange={(e) => setQuery(e.target.value.toLowerCase())}
-      />
-      {console.log(selectedCars)}
+        {/* Search input */}
+        <input
+          className="my-3"
+          placeholder="Search..."
+          onChange={(e) => setQuery(e.target.value.toLowerCase())}
+        />
+        {console.log(selectedCars)}
 
-      {/* Display car data in a table */}
-      <div>
-        {loading ? ( // Display loading message if data is still being fetched
-          <h2>Loading... please wait</h2>
-        ) : (
-          <table>
-            <thead>
-              {/* Table header row */}
-              <tr>
-                <th>Select</th>
-                <th>Make</th>
-                <th>Year</th>
-                <th>Model</th>
-                <th>Registration Number</th>
-                <th>Engine Size</th>
-                <th>Owner</th>
-                <th>Operations</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Map through filtered cars and display them in the table */}
-              {filteredCars.map((car) => (
-                <tr key={car._id}>
-                  <td>
-                    <input
-                      type="checkbox"
-                      value={car._id}
-                      name={car._id}
-                      checked={selectedCars.includes(car._id)}
-                      onChange={() => handleCheckboxChange(car._id)}
-                    />
-                  </td>
-
-                  <td>{car.make}</td>
-                  <td>{car.year}</td>
-                  <td>{car.model}</td>
-                  <td>{car.regNumber}</td>
-                  <td>{car.engineSize}</td>
-                  <td>{car.owner}</td>
-                  <td>
-                    {/* Links to the EditCar and DeleteCar pages with car ID */}
-                    <Link to={`cars/update/${car._id}`}>Edit</Link>
-                    <Link to={`/cars/delete/${car._id}`}>Delete</Link>
-                  </td>
+        {/* Display car data in a table */}
+        <div>
+          {loading ? ( // Display loading message if data is still being fetched
+            <h2>Loading... please wait</h2>
+          ) : (
+            <table>
+              <thead>
+                {/* Table header row */}
+                <tr>
+                  <th>Select</th>
+                  <th>Make</th>
+                  <th>Year</th>
+                  <th>Model</th>
+                  <th>Registration Number</th>
+                  <th>Engine Size</th>
+                  <th>Owner</th>
+                  <th>Operations</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+              </thead>
+              <tbody>
+                {/* Map through filtered cars and display them in the table */}
+                {filteredCars.map((car) => (
+                  <tr key={car._id}>
+                    <td>
+                      <input
+                        type="checkbox"
+                        value={car._id}
+                        name={car._id}
+                        checked={selectedCars.includes(car._id)}
+                        onChange={() => handleCheckboxChange(car._id)}
+                      />
+                    </td>
+
+                    <td>{car.make}</td>
+                    <td>{car.year}</td>
+                    <td>{car.model}</td>
+                    <td>{car.regNumber}</td>
+                    <td>{car.engineSize}</td>
+                    <td>{car.owner}</td>
+                    <td>
+                      {/* Links to the EditCar and DeleteCar pages with car ID */}
+                      <Link to={`cars/update/${car._id}`}>Edit</Link>
+                      <Link to={`/cars/delete/${car._id}`}>Delete</Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
       </div>
     </div>
   );
